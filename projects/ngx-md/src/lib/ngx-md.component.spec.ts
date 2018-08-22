@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
 import { NgxMdComponent } from './ngx-md.component';
 import { NgxMdService } from './ngx-md.service';
 import { Observable, of } from 'rxjs';
@@ -21,7 +20,6 @@ describe('NgxMdComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
       declarations: [NgxMdComponent],
       providers: [
         { provide: NgxMdService, useClass: MockNgxMdService },
@@ -85,7 +83,6 @@ describe('NgxMdComponent in host', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
       declarations: [NgxMdComponent, HostComponent],
       providers: [
         { provide: NgxMdService, useClass: MockNgxMdService },

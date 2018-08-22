@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
 import { MarkdownComponent } from './markdown.component';
 import { MarkdownService } from './markdown.service';
 import { Observable, of } from 'rxjs';
@@ -21,7 +20,6 @@ describe('MarkdownComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
       declarations: [MarkdownComponent],
       providers: [
         { provide: MarkdownService, useClass: MockMarkdownService },
@@ -85,7 +83,6 @@ describe('MarkdownComponent in host', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
       declarations: [MarkdownComponent, HostComponent],
       providers: [
         { provide: MarkdownService, useClass: MockMarkdownService },
